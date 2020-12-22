@@ -122,7 +122,7 @@ $(function(){
         var totalPrice=0;
         //循环表格中的所有选择器 如果是选中的状态 那么计算总价
         $('table tbody input[type=checkbox]').each(function(i,input){
-            if($(input).prop('checked')){
+            if($(input).prop('checked')) {
                 //自增
                 count++;
                 //累加价格
@@ -133,7 +133,7 @@ $(function(){
          //渲染到总价对应的位置
          $('.total').text( totalPrice.toFixed(2) )
          //把数量渲染到对象的dom位置
-         $('.count').text( count.toFixed(2) )
+         $('.count').text( count)
     }
 
 
@@ -142,7 +142,7 @@ $(function(){
         $('.goodsCount').text($('table tbody tr').length)
 
     }
-    calcTotalPrice();//一进入界面 就自定调用一次
+    calcGoodsCount();//一进入界面 就自定调用一次
    
     //删除选中商品
     $('.deleteChecked').on('click',function(){
